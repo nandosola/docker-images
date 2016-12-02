@@ -1,5 +1,10 @@
 ### Docker Repository
-This image is hosted at `graphenedb/openjdk8-sbt`
+This image is hosted at [`graphenedb/openjdk8-sbt`](https://hub.docker.com/r/graphenedb/openjdk8-sbt/)
+
+### Versions
+* `Alpine Linux, edge branch`
+* `OpenJDK 64-Bit build 1.8.0_111-b14`
+* `SBT 0.13.6`
 
 ### Usage
 Go to the root of your Scala project and type:
