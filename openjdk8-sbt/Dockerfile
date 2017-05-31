@@ -48,16 +48,11 @@ ENV GOSU_SHA256_SUM 5b3b03713a888cee84ecbf4582b21ac9fd46c3d935ff2d7ea25dd5055d30
 
 #==================================================
 # Miscellaneous packages
-# iproute and telnet are not part of the base dist
-# tree is convenient for troubleshooting builds
 #==================================================
 RUN apk add --no-cache  \
       ca-certificates \
       tar bzip2 zip unzip \
-      wget curl \
-      bash \
-      secure-delete \
-      git
+      wget curl
 
 # ========================================================================
 # Download a precompiled binary for gosu (https://github.com/tianon/gosu)
