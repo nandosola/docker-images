@@ -12,8 +12,9 @@ MAINTAINER Nando Sola <nando@graphenedb.com>
 # https://github.com/docker-library/openjdk/blob/master/8-jdk/alpine/Dockerfile
 ####################################################################################
 
-ENV JAVA_VERSION 8u121
-ENV JAVA_ALPINE_VERSION 8.121.13-r0
+# Check https://pkgs.alpinelinux.org/package/edge/community/x86/openjdk8-jre for new versions
+ENV JAVA_VERSION 8u131
+ENV JAVA_ALPINE_VERSION 8.131.11-r1
 
 ENV LANG C.UTF-8
 ENV ARCH amd64
