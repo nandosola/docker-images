@@ -12,8 +12,8 @@ MAINTAINER Nando Sola <nando@graphenedb.com>
 # https://github.com/docker-library/openjdk/blob/master/8-jdk/alpine/Dockerfile
 ####################################################################################
 
-ENV JAVA_VERSION 8u111
-ENV JAVA_ALPINE_VERSION 8.111.14-r1
+ENV JAVA_VERSION 8u121
+ENV JAVA_ALPINE_VERSION 8.121.13-r0
 
 ENV LANG C.UTF-8
 ENV ARCH amd64
@@ -70,11 +70,11 @@ ADD bin/fakesudo /usr/local/bin/sudo
 RUN chmod 755 /usr/local/bin/sudo
 
 #==============================================
-# Add 'jenkins' user to run tests
+# Add 'ci' user to run tests
 # This adds compatibility with our CI process
 #==============================================
-RUN addgroup -g 1000 jenkins && \
-    adduser -s /bin/bash -h /home/jenkins -D -u 1000 -G jenkins jenkins
+RUN addgroup -g 1000 ci && \
+    adduser -s /bin/bash -h /home/ci -D -u 1000 -G ci ci
 
 #==========================
 # Get SBT and dependencies
@@ -86,12 +86,12 @@ RUN  chmod a+x /usr/local/bin/sbt &&\
 
 RUN echo "==> fetch all sbt jars from Maven repo..."       && \
     echo "==> [CAUTION] this may take several minutes!!!"  && \
-    su -c '/usr/local/bin/sbt version' - jenkins
+    su -c '/usr/local/bin/sbt version' - ci
 
 #=============
 # Final setup
 #=============
-USER jenkins
+USER ci
 
 VOLUME [ "/app" ]
 WORKDIR /app
