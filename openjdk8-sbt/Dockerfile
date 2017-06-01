@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM nandosola/pimped-alpine
 MAINTAINER Nando Sola <nando@graphenedb.com>
 
 ####################################################################################
@@ -41,29 +41,6 @@ RUN set -x \
 ENV SBT_VERSION 0.13.6
 ENV SBT_JAR     https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/$SBT_VERSION/sbt-launch.jar
 
-# 'gosu' wil be used instead of 'sudo', as recommended by:
-# http://docs.docker.com/articles/dockerfile_best-practices/
-ENV GOSU_VERSION    1.10
-ENV GOSU_SHA256_SUM 5b3b03713a888cee84ecbf4582b21ac9fd46c3d935ff2d7ea25dd5055d302d3c
-
-#==================================================
-# Miscellaneous packages
-#==================================================
-RUN apk add --no-cache  \
-      ca-certificates \
-      tar bzip2 zip unzip \
-      wget curl
-
-# ========================================================================
-# Download a precompiled binary for gosu (https://github.com/tianon/gosu)
-# ========================================================================
-RUN wget -O /usr/local/bin/gosu "https://github.com/tianon/gosu/releases/download/$GOSU_VERSION/gosu-$ARCH" && \
-    echo "$GOSU_SHA256_SUM  /usr/local/bin/gosu" | sha256sum -c - && \
-    chmod 4755 /usr/local/bin/gosu
-
-# Fake sudo, as a wrapper for gosu
-ADD bin/fakesudo /usr/local/bin/sudo
-RUN chmod 755 /usr/local/bin/sudo
 
 #==============================================
 # Add 'ci' user to run tests
