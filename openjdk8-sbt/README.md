@@ -1,5 +1,5 @@
 ### Docker Repository
-This image is hosted at [`graphenedb/openjdk8-sbt`](https://hub.docker.com/r/graphenedb/openjdk8-sbt/)
+This image is hosted at [`nandosola/openjdk8-sbt`](https://hub.docker.com/r/graphenedb/openjdk8-sbt/)
 
 ### Versions
 * `Alpine Linux, edge branch`
