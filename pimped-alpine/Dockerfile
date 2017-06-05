@@ -20,7 +20,7 @@ RUN apk add --no-cache  \
       wget curl \
       bash openssh-client \
       secure-delete \
-      git
+      git python2
 
 # ========================================================================
 # Download a precompiled binary for gosu (https://github.com/tianon/gosu)
