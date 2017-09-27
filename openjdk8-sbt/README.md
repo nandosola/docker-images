@@ -3,8 +3,8 @@ This image is hosted at [`nandosola/openjdk8-sbt`](https://hub.docker.com/r/nand
 
 ### Versions
 * `Alpine Linux, edge branch`
-* `OpenJDK 64-Bit build 1.8.0_111-b14`
-* `SBT 0.13.6`
+* `OpenJDK 64-Bit build 1.8.0_144`
+* `SBT 0.13.12`
 
 ### Usage
 Go to the root of your Scala project and type:

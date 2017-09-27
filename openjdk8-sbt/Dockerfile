@@ -13,8 +13,8 @@ MAINTAINER Nando Sola <nando@graphenedb.com>
 ####################################################################################
 
 # Check https://pkgs.alpinelinux.org/package/edge/community/x86/openjdk8-jre for new versions
-ENV JAVA_VERSION 8u131
-ENV JAVA_ALPINE_VERSION 8.131.11-r1
+ENV JAVA_VERSION 8u144
+ENV JAVA_ALPINE_VERSION 8.144.01-r0
 
 ENV LANG C.UTF-8
 ENV ARCH amd64
@@ -38,7 +38,7 @@ RUN set -x \
   && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 
 # SBT
-ENV SBT_VERSION 0.13.6
+ENV SBT_VERSION 0.13.12
 ENV SBT_JAR     https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/$SBT_VERSION/sbt-launch.jar
 
 
