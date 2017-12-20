@@ -15,6 +15,7 @@ ENV GOSU_SHA256_SUM 5b3b03713a888cee84ecbf4582b21ac9fd46c3d935ff2d7ea25dd5055d30
 # https://circleci.com/docs/2.0/custom-images/#required-tools
 #==================================================
 RUN apk add --no-cache  \
+      shadow \
       ca-certificates \
       tar bzip2 zip unzip \
       wget curl \
