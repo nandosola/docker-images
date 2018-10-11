@@ -38,7 +38,7 @@ RUN set -x \
   && [ "$JAVA_HOME" = "$(docker-java-home)" ]
 
 # SBT
-ENV SBT_VERSION 0.13.12
+ENV SBT_VERSION 0.13.17
 ENV SBT_JAR     https://repo.typesafe.com/typesafe/ivy-releases/org.scala-sbt/sbt-launch/$SBT_VERSION/sbt-launch.jar
 
 
