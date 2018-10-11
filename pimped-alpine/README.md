@@ -6,3 +6,10 @@ This image is hosted at [`nandosola/pimped-alpine`](https://hub.docker.com/r/nan
 
 ### Usage
 This is a base image for projects to build upon
+
+### Build
+```
+docker build -t nandosola/pimped-alpine .
+```
+
+
