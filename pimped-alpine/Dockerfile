@@ -1,4 +1,4 @@
-FROM alpine:edge
+FROM alpine:3.8
 MAINTAINER Nando Sola <nando@graphenedb.com>
 
 ENV LANG C.UTF-8
